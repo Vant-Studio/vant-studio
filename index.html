@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/brand/vant-studio-icon.png" />
+    <title>Vant Studio Catalogo — Catálogo Digital</title>
+    <meta name="description" content="Vant Studio Catalogo — criação e visualização de catálogos digitais" />
+    <meta name="author" content="Vant Studio Catalogo" />
+
+    <meta property="og:title" content="Vant Studio Catalogo — Catálogo Digital" />
+    <meta property="og:description" content="Vant Studio Catalogo — criação e visualização de catálogos digitais" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/brand/vant-studio-logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vant Studio Catalogo" />
+    <meta name="twitter:image" content="/brand/vant-studio-logo.png" />
+  </head>
+
+  <body data-gramm="false">
+    <div id="root"></div>
+    <script src="/env-config.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Filtro para limpar o console de erros de extensões (Grammarly/Iterable)
+      const originalError = console.error;
+      console.error = function(...args) {
+        const msg = args[0] ? String(args[0]) : "";
+        if (msg.includes("iterable") || msg.includes("Grammarly") || msg.includes("intrinsics")) {
+          return;
+        }
+        originalError.apply(console, args);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Segredos e ambiente local (nunca versionar)
+.env
+.env.*
+!.env.example
+
+# CLI Supabase local (credenciais / cache)
+supabase/.temp/
+
+# Artefactos Lovable legados e env gerado em deploy (pode conter chaves)
+.lovable/
+dist/env-config.js
+
+# Playwright / e2e (opcional)
+/test-results/
+/playwright-report/
+/blob-report/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
